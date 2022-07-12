@@ -5,8 +5,9 @@ metadata:
   name: webdav
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   resources:
     requests:
-      storage: 2Gi
-  storageClassName: csi-ceph-hdd-dp1
+      storage: 10Gi
+  volumeName: "webdav"
+  storageClassName: ""
