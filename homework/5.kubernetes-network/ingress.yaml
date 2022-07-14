@@ -13,6 +13,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: my-service
+            name: redmine
             port:
-              number: 8080
+              number: 3000
