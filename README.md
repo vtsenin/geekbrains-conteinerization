@@ -75,6 +75,8 @@
 
 🔹 [ENTRYPOINT vs CMD: назад к основам](https://habr.com/ru/company/southbridge/blog/329138/)
 
+🔹 [ADD vs COPY](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#add-or-copy)
+
 🔹 [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
 
 🔹 [Use multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
@@ -162,6 +164,8 @@
 ## Лекция 7. Продвинутые абстракции
 
 🎥 [Митап "Stateful-приложения в 2020 году"](https://www.youtube.com/watch?v=ykIh4-616Ic&list=PL8D2P0ruohODzihD0D0FZXkVHXtXbb6w3&index=4&ab_channel=HighLoadChannel)
+
+🎥 [Базы данных и Kubernetes (Дмитрий Столяров, Флант, HighLoad++ 2018)](https://www.youtube.com/watch?v=BnegHj53pW4&ab_channel=%D0%A4%D0%BB%D0%B0%D0%BD%D1%82)
 
 🎥 [Заделываем дыры в кластере Kubernetes](https://www.youtube.com/watch?v=Ik7VqbgpRiQ&ab_channel=DevOpsChannel)
 
