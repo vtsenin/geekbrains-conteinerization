@@ -14,8 +14,8 @@ spec:
       labels:
         app: prometheus
     spec:
-      serviceAccount: prometheus
-      terminationGracePeriodSeconds: 10
+ #     serviceAccount: prometheus
+ #     terminationGracePeriodSeconds: 10
       containers:
         - name: prometheus-k8s
           image: prom/prometheus:v2.19.2
@@ -23,33 +23,35 @@ spec:
             - name: prometheus
               protocol: TCP
               containerPort: 9090
-          livenessProbe:
-            exec:
-              command: ["prometheus", "status"]
-            initialDelaySeconds: 60
-            periodSeconds: 60
-            timeoutSeconds: 15
-          readinessProbe:
-            exec:
-              command: ["prometheus", "status"]
-            initialDelaySeconds: 20
-            periodSeconds: 60
-            timeoutSeconds: 10
-          imagePullPolicy: Always
+ #         livenessProbe:
+ #           exec:
+ #             command: ["prometheus", "status"]
+ #           initialDelaySeconds: 60
+ #           periodSeconds: 60
+ #           timeoutSeconds: 15
+ #         readinessProbe:
+ #           exec:
+ #             command: ["prometheus", "status"]
+ #           initialDelaySeconds: 20
+ #           periodSeconds: 60
+ #           timeoutSeconds: 10
+ #         imagePullPolicy: Always
           volumeMounts:
             - name: config-volume
               mountPath: /etc/prometheus
             - name: data
               mountPath: /prometheus
-      initContainers:
-      - image: busybox:1.28
-        name: mount-permissions-fix
-        command: ["sh", "-c", "chmod 777 /data"]
+#      initContainers:
+#      - image: busybox:1.28
+#        name: mount-permissions-fix
+#        command: ["sh", "-c", "chmod 777 /data"]
 
       volumes:
         - name: config-volume
           configMap:
             name: prometheus-config
+        - name: data
+
   volumeClaimTemplates:
     - metadata:
         name: data
