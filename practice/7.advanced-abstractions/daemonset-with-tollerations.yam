@@ -42,7 +42,7 @@ spec:
         - effect: NoSchedule
           operator: Exists
       nodeSelector:
-        beta.kubernetes.io/os: linux
+        beta.kubernetes.io/os: gpu
       volumes:
       - hostPath:
           path: /proc
